@@ -1,7 +1,7 @@
 from Pages.home_page import HomePage
 from Pages.contact_page import ContactForm
 from Tests.test_base import BaseTest
-from data import sex, name, surname, email_correct, phone_number, comment, fakename, fakesurname
+from data import sex, email_correct, phone_number, comment, fakename, fakesurname
 
 
 class ContactTest(BaseTest):

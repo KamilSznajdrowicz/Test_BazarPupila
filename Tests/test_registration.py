@@ -1,7 +1,7 @@
 from Pages.home_page import HomePage
 from Pages.registration_page import RegistrationPage
 from Tests.test_base import BaseTest
-from data import type_account2, sex, name, surname, fakename, fakesurname, email_correct, password, street, post_code, city, phone_number, email, type_account, password_short, factory, department
+from data import type_account2, sex, fakename, fakesurname, email_correct, password, street, post_code, city, phone_number, email, type_account, password_short, factory, department
 
 
 class RegistrationTest(BaseTest):
