@@ -9,5 +9,5 @@ deps:
 tests:
 	${RUNTEST} ${ALLMODULES}
 
-test_%: Tests.test_%.py
-	${RUNTEST} Tests.test_%.py
+test_%:
+	${RUNTEST} Tests.$@
