@@ -1,7 +1,7 @@
 from Pages.home_page import HomePage
 from Pages.registration_page import RegistrationPage
 from Tests.test_base import BaseTest
-from data import type_account2, sex, fakename, fakesurname, email_correct, password, street, post_code, city, phone_number, email, type_account, password_short, factory, department
+from data import type_account2, sex, fakename, fakesurname, email_correct, password, street, post_code, city, phone_number, email, type_account, password_short, factory, department, facebook_email, facebook_password
 
 
 class RegistrationTest(BaseTest):
@@ -76,3 +76,18 @@ class RegistrationTest(BaseTest):
         print(rp.report_nip())
         self.assertEqual(rp.report_nip(), error_expected)
 
+    def testFacebook(self):
+        hp = HomePage(self.driver)
+        hp.click_account()
+        hp.click_sign_in()
+        rp = RegistrationPage(self.driver)
+        rp.click_facebook_button()
+        rp.accept_facebook_cookies()
+        rp.enter_facebook_login(facebook_email)
+        rp.enter_facebook_password(facebook_password)
+        rp.click_login_facebook_button()
+        rp.change_profile()
+        #Check
+        actual_result = rp.report_check_facebook_email()
+        expected_result = facebook_email
+        self.assertEqual(actual_result, expected_result)

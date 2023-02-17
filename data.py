@@ -25,3 +25,6 @@ fakename = fake.first_name()
 fakesurname = fake.last_name()
 fakebirthday = fake.date_of_birth()
 comment = fake.text()
+#facebook
+facebook_email = 'testgithubbazarpupila@gmail.com'
+facebook_password = 'Tester123'

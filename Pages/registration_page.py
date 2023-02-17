@@ -90,5 +90,33 @@ class RegistrationPage(BasePage):
         error_fact = (nip.get_attribute("validationMessage"))
         return error_fact
 
+    def click_facebook_button(self):
+        facebook_button = self.driver.find_element(*RegistrationPageLocators.facebook_button)
+        facebook_button.click()
+
+    def accept_facebook_cookies(self):
+        facebook_cookies = self.driver.find_element(*RegistrationPageLocators.facebook_cookies)
+        facebook_cookies.click()
+
+    def enter_facebook_login(self, facebook_login):
+        facebook_input_login = self.driver.find_element(*RegistrationPageLocators.facebook_login)
+        facebook_input_login.send_keys(facebook_login)
+
+    def enter_facebook_password(self, facebook_password):
+        facebook_input_password = self.driver.find_element(*RegistrationPageLocators.facebook_password)
+        facebook_input_password.send_keys(facebook_password)
+
+    def click_login_facebook_button(self):
+        login_facebook_button = self.driver.find_element(*RegistrationPageLocators.facebook_login_button)
+        login_facebook_button.click()
+
+    def change_profile(self):
+        change_facebook_profile = self.driver.find_element(*RegistrationPageLocators.facebook_change_profile)
+        change_facebook_profile.click()
+
+    def report_check_facebook_email(self):
+        report_check = self.driver.find_element(*RegistrationPageLocators.facebook_check).text
+        return report_check
+
 
 
