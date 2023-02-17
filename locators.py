@@ -23,6 +23,14 @@ class RegistrationPageLocators:
     factory_input_in = (By.ID,'billingAddresscompany')
     department_input_in = (By.ID, 'billingAddressdepartment')
     NIP_input = (By.ID, "vatIds")
+    # facebook
+    facebook_button = (By.NAME, 'provider')
+    facebook_cookies = (By.XPATH, '//button[contains(string(),"Allow essential and optional cookies")]')
+    facebook_login = (By.ID, 'email')
+    facebook_password = (By.ID, 'pass')
+    facebook_login_button = (By.ID, 'loginbutton')
+    facebook_change_profile = (By.PARTIAL_LINK_TEXT, 'Zmień')
+    facebook_check = (By.CLASS_NAME, 'account-profile-mail')
 
 class ContactFormPageLocators:
     scroll_act = (By.XPATH,'//div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/div/div')
